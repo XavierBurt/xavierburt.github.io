@@ -1,0 +1,78 @@
+{
+  "basics": {
+    "name": "Xavier Burt",
+    "label": "Student",
+    "picture": "https://github.com/XavierBurt.png",
+    "email": "rxb@hawaii.edu",
+    "phone": "970-286-8161",
+    "website": "https://XavierBurt.github.io",
+    "summary": "I am currently studying Physics and Computer Science at the Univeristy of Hawaii at Manoa. I expect to graduate in Spring, 2024.",
+    "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "profiles": [
+      { "network": "github", "username": "XavierBurt", "url": "http://github.com/XavierBurt" },
+      { "network": "linkedin", "username": "Robert Burt", "url": "https://www.linkedin.com/in/robert-burt-9578a6261/" }
+    ]
+  },
+  "interests": [
+    { "name": "Unity and Unreal Engine" },
+    { "name": "Videogame Mod developement" },
+    { "name": "Quantum Computing" },
+    { "name": "Theoretical and Experimental Physics" },
+    { "name": "and Algorithms" }
+  ],
+  "skills": [
+    {
+      "name": "Languages and Frameworks",
+      "keywords": [ "C", "C++", "Java", "Javascript", "CSS & HTML", "C#" ]
+    },
+    {
+      "name": "Toolsets/OS",
+      "keywords": [ "MacOS", "Ubuntu", "Git/GitHub", "g++", "Windows", "Microsoft Excel" ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Hawaii, Honolulu, HI",
+      "area": "Computer Science (expected Spring, 2018)",
+      "studyType": "B.S.",
+      "startDate": "2013-09-01",
+      "endDate": "Present",
+      "courses": [
+        "ICS 212, 314, 311, Phys 272L, SUST 115, Math 241"
+      ]
+    }
+  ],
+  "work": [
+    {
+      "company": "UH Manoa",
+      "position": "Usher",
+      "website": "",
+      "startDate": "2021-09-01",
+      "endDate": "Present",
+      "summary": "Working baseball and football games.",
+      "highlights": [
+        "Manage a large group of people",
+        "Maintain the peace in a large stadium."
+      ]
+    },
+    {
+      "company": "UH Manoa",
+      "position": "Lab Assistant",
+      "website": "",
+      "startDate": "2022-10-01",
+      "endDate": "Present",
+      "summary": "An assistant for DUNE",
+      "highlights": [
+        "Helping with the assembly and use of lasers.",
+        "Assisting with the collection and analysis of data."
+      ]
+    }
+  ],
+  "volunteer": [ ],
+  "awards": [ ],
+  "references": [
+    {
+      "name": "Available upon request"
+    }
+  ]
+}

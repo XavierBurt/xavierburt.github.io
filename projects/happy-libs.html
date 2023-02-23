@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="HappyLibs | Xavier Burt | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/XavierBurt.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Xavier Burt | Professional Portfolio">
+    <meta property="og:url" content="https://xavierburt.github.io/projects/happy-libs.html">
+    <meta property="og:title" content="HappyLibs | Xavier Burt | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/XavierBurt.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/mine.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>HappyLibs | Xavier Burt | Professional Portfolio</title>
+  </head>
+  <body style="background-color: var(--tf-page-bg-color)">
+  <header class="navbar navbar-expand navbar-dark bg-dark border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Xavier Burt</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">HappyLibs</h1>
+ <p>In the spirit of learning python, I coded this game.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">Colors</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">nouns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s">"Your Mom"</span><span class="p">,</span>
+    <span class="s">"Briana"</span><span class="p">,</span>
+    <span class="s">"Your Doge"</span><span class="p">,</span>
+    <span class="s">"Buttons"</span><span class="p">,</span>
+    <span class="s">"My Computer"</span><span class="p">,</span>
+    <span class="s">"Edward Scizzorhands"</span><span class="p">,</span>
+    <span class="s">"The Candy-man"</span><span class="p">,</span>
+    <span class="s">"Andrew"</span><span class="p">,</span>
+    <span class="s">"Liam"</span><span class="p">,</span>
+    <span class="s">"Olivia"</span><span class="p">,</span>
+    <span class="s">"Noah"</span><span class="p">,</span>
+    <span class="s">"Emma"</span><span class="p">,</span>
+    <span class="s">"Charlotte"</span><span class="p">,</span>
+    <span class="s">"The Green Arrow"</span><span class="p">,</span>
+    <span class="s">"Charlotte's Web"</span><span class="p">,</span>
+    <span class="s">"Elijah"</span><span class="p">,</span>
+    <span class="s">"Hey There Delilah"</span>
+<span class="p">]</span>
+<span class="n">verbs</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s">"jumped on"</span><span class="p">,</span>
+    <span class="s">"shitted on"</span><span class="p">,</span>
+    <span class="s">"killed"</span><span class="p">,</span>
+    <span class="s">"stabbed"</span><span class="p">,</span>
+    <span class="s">"fucked"</span><span class="p">,</span>
+    <span class="s">"squished"</span><span class="p">,</span>
+    <span class="s">"wrestled"</span><span class="p">,</span>
+    <span class="s">"jiggled"</span><span class="p">,</span>
+    <span class="s">"wiggled"</span><span class="p">,</span>
+    <span class="s">"danced with"</span><span class="p">,</span>
+    <span class="s">"sang"</span><span class="p">,</span>
+    <span class="s">"pencilled"</span><span class="p">,</span>
+    <span class="s">"broke"</span><span class="p">,</span>
+    <span class="s">"bent"</span><span class="p">,</span>
+    <span class="s">"bought"</span><span class="p">,</span>
+    <span class="s">"sold"</span><span class="p">,</span>
+    <span class="s">"himself"</span>
+<span class="p">]</span>
+<span class="n">places</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s">"the outside"</span><span class="p">,</span>
+    <span class="s">"the bathroom"</span><span class="p">,</span>
+    <span class="s">"an island in the pacific"</span><span class="p">,</span>
+    <span class="s">"your mom"</span><span class="p">,</span>
+    <span class="s">"narnia"</span><span class="p">,</span>
+    <span class="s">"the woman's bathroom"</span><span class="p">,</span>
+    <span class="s">"school"</span><span class="p">,</span>
+    <span class="s">"their parents house"</span><span class="p">,</span>
+    <span class="s">"an auction house"</span><span class="p">,</span>
+    <span class="s">"hell"</span><span class="p">,</span>
+    <span class="s">"nirvana"</span><span class="p">,</span>
+    <span class="s">"bullshit land"</span><span class="p">,</span>
+    <span class="s">"a giant's mouth"</span><span class="p">,</span>
+    <span class="s">"the quantum realm"</span><span class="p">,</span>
+    <span class="s">"the MCU"</span><span class="p">,</span>
+    <span class="s">"the pool"</span><span class="p">,</span>
+    <span class="s">"a volcano"</span><span class="p">,</span>
+    <span class="s">"space"</span>
+<span class="p">]</span>
+<span class="n">sentence_formats</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"1"</span><span class="p">:</span> <span class="s">"Remember that time when %noun% decided that %noun% %verb% %noun% in %place%?"</span><span class="p">,</span>
+    <span class="s">"2"</span><span class="p">:</span> <span class="s">"It would be funny if %noun% and %noun% %verb% eachother in %place%"</span><span class="p">,</span>
+    <span class="s">"3"</span><span class="p">:</span> <span class="s">"%noun% %verb% %noun% in %place%"</span><span class="p">,</span>
+    <span class="s">"4"</span><span class="p">:</span> <span class="s">"I loved when %noun% %verb% %noun%"</span>
+<span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">sentence_constructor</span><span class="p">(</span><span class="n">output</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="n">replace</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">tempstr</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="n">end_of_string</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">i1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">i2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sentence_formats</span><span class="p">))</span>
+    <span class="n">sentence_format</span> <span class="o">=</span> <span class="n">sentence_formats</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">end_of_string</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sentence_format</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s">"%"</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">replace</span><span class="p">:</span>
+                    <span class="n">i1</span> <span class="o">=</span> <span class="n">i</span>
+                    <span class="n">replace</span> <span class="o">=</span> <span class="bp">True</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">i2</span> <span class="o">=</span> <span class="n">i</span>
+                    <span class="n">replace</span> <span class="o">=</span> <span class="bp">False</span>
+                    <span class="k">break</span>
+            <span class="k">elif</span> <span class="n">replace</span><span class="p">:</span>
+                <span class="n">tempstr</span> <span class="o">=</span> <span class="n">tempstr</span> <span class="o">+</span> <span class="n">c</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">end_of_string</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">match</span> <span class="n">tempstr</span><span class="p">:</span>
+            <span class="n">case</span> <span class="s">"noun"</span><span class="p">:</span>
+                <span class="n">noun</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="n">nouns</span><span class="p">)</span>
+                <span class="n">sentence_format</span> <span class="o">=</span> <span class="n">sentence_format</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"%noun%"</span><span class="p">,</span> <span class="n">noun</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">case</span> <span class="s">"verb"</span><span class="p">:</span>
+                <span class="n">verb</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="n">verbs</span><span class="p">)</span>
+                <span class="n">sentence_format</span> <span class="o">=</span> <span class="n">sentence_format</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"%verb%"</span><span class="p">,</span> <span class="n">verb</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">case</span> <span class="s">"place"</span><span class="p">:</span>
+                <span class="n">place</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="n">places</span><span class="p">)</span>
+                <span class="n">sentence_format</span> <span class="o">=</span> <span class="n">sentence_format</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"%place%"</span><span class="p">,</span> <span class="n">place</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">tempstr</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">sentence_format</span>
+    <span class="k">return</span> <span class="n">key</span>
+
+
+<span class="n">message</span> <span class="o">=</span> <span class="n">Colors</span><span class="p">.</span><span class="n">Fg</span><span class="p">.</span><span class="n">lightblue</span> <span class="o">+</span> <span class="s">"Welcome to HappyLibs!"</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="p">.</span><span class="n">center</span><span class="p">(</span><span class="mi">225</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">Colors</span><span class="p">.</span><span class="n">reset</span> <span class="o">+</span> <span class="s">"The objective of this game is to guess what the ai put in the blanks."</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="p">.</span><span class="n">center</span><span class="p">(</span><span class="mi">225</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">Colors</span><span class="p">.</span><span class="n">reset</span> <span class="o">+</span> <span class="s">"For example, you might be given this sentence:"</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="p">.</span><span class="n">center</span><span class="p">(</span><span class="mi">225</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">Colors</span><span class="p">.</span><span class="n">Fg</span><span class="p">.</span><span class="n">lightcyan</span> <span class="o">+</span> <span class="s">"I loved when "</span> <span class="o">+</span> <span class="n">Colors</span><span class="p">.</span><span class="n">Fg</span><span class="p">.</span><span class="n">lightgreen</span> <span class="o">+</span> <span class="s">"(noun) (verb) (noun)"</span> <span class="o">+</span> <span class="n">Colors</span><span class="p">.</span><span class="n">Fg</span><span class="p">.</span><span class="n">lightcyan</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="p">.</span><span class="n">center</span><span class="p">(</span><span class="mi">235</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">Colors</span><span class="p">.</span><span class="n">reset</span> <span class="o">+</span> <span class="s">"You would fill in the green spaces, each with a different value, for example,"</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="p">.</span><span class="n">center</span><span class="p">(</span><span class="mi">225</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">Colors</span><span class="p">.</span><span class="n">Fg</span><span class="p">.</span><span class="n">lightcyan</span> <span class="o">+</span> <span class="s">"I loved when "</span> <span class="o">+</span> <span class="n">Colors</span><span class="p">.</span><span class="n">Fg</span><span class="p">.</span><span class="n">lightgreen</span> <span class="o">+</span> <span class="s">"your mom fucked Briana"</span> <span class="o">+</span> <span class="n">Colors</span><span class="p">.</span><span class="n">Fg</span><span class="p">.</span><span class="n">lightcyan</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="p">.</span><span class="n">center</span><span class="p">(</span><span class="mi">235</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">Colors</span><span class="p">.</span><span class="n">reset</span> <span class="o">+</span> <span class="s">"The AI will also do this, it may come up with"</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="p">.</span><span class="n">center</span><span class="p">(</span><span class="mi">225</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">Colors</span><span class="p">.</span><span class="n">Fg</span><span class="p">.</span><span class="n">lightcyan</span> <span class="o">+</span> <span class="s">"I loved when "</span> <span class="o">+</span> <span class="n">Colors</span><span class="p">.</span><span class="n">Fg</span><span class="p">.</span><span class="n">lightgreen</span> <span class="o">+</span> <span class="s">"your mom jumped your doge"</span> <span class="o">+</span> <span class="n">Colors</span><span class="p">.</span><span class="n">Fg</span><span class="p">.</span><span class="n">lightcyan</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="p">.</span><span class="n">center</span><span class="p">(</span><span class="mi">235</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">Colors</span><span class="p">.</span><span class="n">reset</span> <span class="o">+</span> <span class="s">"In this case, you would end up with 2 points, because you guessed 'your mom,' "</span> \
+                         <span class="s">"and you both got the correct noun, and you got it in the right place."</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="p">.</span><span class="n">center</span><span class="p">(</span><span class="mi">225</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre></div></div>
+<p>It actually utilizes a second class, Colors, which allows it to have colored UI</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Colors</span><span class="p">:</span>
+    <span class="n">reset</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[0m'</span>
+    <span class="n">bold</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[01m'</span>
+    <span class="n">disable</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[02m'</span>
+    <span class="n">underline</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[04m'</span>
+    <span class="n">reverse</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[07m'</span>
+    <span class="n">strikethrough</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[09m'</span>
+    <span class="n">invisible</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[08m'</span>
+
+    <span class="k">class</span> <span class="nc">Fg</span><span class="p">:</span>
+        <span class="n">black</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[30m'</span>
+        <span class="n">red</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[31m'</span>
+        <span class="n">green</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[32m'</span>
+        <span class="n">orange</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[33m'</span>
+        <span class="n">blue</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[34m'</span>
+        <span class="n">purple</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[35m'</span>
+        <span class="n">cyan</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[36m'</span>
+        <span class="n">lightgrey</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[37m'</span>
+        <span class="n">darkgrey</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[90m'</span>
+        <span class="n">lightred</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[91m'</span>
+        <span class="n">lightgreen</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[92m'</span>
+        <span class="n">yellow</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[93m'</span>
+        <span class="n">lightblue</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[94m'</span>
+        <span class="n">pink</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[95m'</span>
+        <span class="n">lightcyan</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[96m'</span>
+
+    <span class="k">class</span> <span class="nc">Bg</span><span class="p">:</span>
+        <span class="n">black</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[40m'</span>
+        <span class="n">red</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[41m'</span>
+        <span class="n">green</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[42m'</span>
+        <span class="n">orange</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[43m'</span>
+        <span class="n">blue</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[44m'</span>
+        <span class="n">purple</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[45m'</span>
+        <span class="n">cyan</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[46m'</span>
+        <span class="n">lightgrey</span> <span class="o">=</span> <span class="s">'</span><span class="se">\033</span><span class="s">[47m'</span>
+</code></pre></div></div>
+<p>My implementation of this very iconic game is something I am very proud of, it is something I could add onto any time, and something that I honestly had a lot of fun making.</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-dark bg-dark border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

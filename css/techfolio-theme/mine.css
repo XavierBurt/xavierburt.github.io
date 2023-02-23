@@ -1,0 +1,79 @@
+/* Skyblue Theme: modifies the default theme to use blue in various places. */
+/* Use Open Sans as the default font. */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,700");
+
+/* See https://getbootstrap.com/docs/5.2/customize/css-variables/#root-variables for variables to override. */
+:root {
+  --tf-gray1: #2A4F7C;
+  --tf-header: #91e1f5;
+  --tf-blue2: #1b6fa9;
+  --tf-gray3: #FAFAFA;
+  --tf-gray2: #242424;
+  --bs-font-sans-serif: "Open Sans", sans-serif;
+  --bs-link-color: var(--tf-gray2);
+  --tf-pill-bg: var(--tf-gray2);
+  --tf-icon-fill: var(--tf-header);
+  --tf-page-bg-color: var(--tf-gray1);
+  --tf-footer-bg-color: var(--tf-gray2);
+  --tf-projects-bg-color: var(--tf-gray2);
+  --tf-essays-bg-color: var(--tf-gray1);
+  --tf-text-color: var(--tf-gray3);
+}
+h1,h2,h3,h4,h5 {
+  color: var(--tf-header);
+  font-family: Rubik;
+}
+/* Format social media icons */
+.tf-social {
+  display: inline-block;
+  fill: var(--tf-header);
+  height: 1.5em;
+  vertical-align: -.1em;
+  width: 1.5em;
+}
+
+a {
+  color: var(--tf-text-color);
+}
+p {
+  color: var(--tf-text-color);
+}
+li {
+  color: var(--tf-text-color);
+}
+small {
+  color: var(--tf-text-color);
+}
+span {
+  color: var(--tf-text-color); 
+}
+pre code {
+  color: var(--tf-text-color); !important
+}
+
+.n, .p, .nn {
+  color: var(--bs-link-color);
+}
+.bp {
+  color: #0086B3
+}
+.notblue {
+  color: var(--tf-projects-bg-color); 
+}
+.highlight {
+  background-color: var(--tf-projects-bg-color) !important;
+}
+.highlighter-rouge {
+  background-color: var(--tf-projects-bg-color);
+}
+
+.rounded-circle {
+  border-color: var(--tf-gray2);
+  border-style: solid;
+  border-width: 1px;
+}
+.special-text {
+  --bs-text-opacity: 1;
+  color: var(--tf-bs-link-color);
+}
