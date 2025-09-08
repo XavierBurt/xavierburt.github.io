@@ -29,24 +29,16 @@ concurrency:
 jobs:
   # Build job
   build:
-    if: true
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ ubuntu-22.04, ubuntu-24.04, ubuntu-22.04-arm, ubuntu-24.04-arm, macos-13, macos-14 ]
-        ruby: [jruby-9.4.14.0]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Ruby
-        run: |
-          ruby=${{ matrix.ruby }}
-          if [[ "$ruby" == [0-9]* ]]; then
-            ruby="ruby-$ruby"
-          fi
-          echo "ruby=$ruby" >> $GITHUB_OUTPUT
-          echo "archive=$ruby-${{ steps.platform.outputs.platform }}.tar.gz" >> $GITHUB_OUTPUT
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
